@@ -3,10 +3,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head>
-        <link rel="icon" href="/images/Logo2.png" />
-        <title>ZAG Store</title>
-      </Head>
+      <Head />
       <body className="antialiased">
         <Main />
         <NextScript />

@@ -17,7 +17,7 @@ import Cart from "../icons/Cart";
 import Menu from "../icons/Menu";
 import Search from "../icons/Search";
 import User from "../icons/User";
-import { useGetCategoriesNavbar } from "@/hooks/queries";
+import { useGetCategories } from "@/hooks/queries";
 import Telegram from "../icons/Telegram";
 import Instageram from "../icons/Instageram";
 import Whatsapp from "../icons/Whatsapp";
@@ -25,13 +25,13 @@ import Email from "../icons/Email";
 
 function Header() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const { data } = useGetCategoriesNavbar();
+  const { data } = useGetCategories();
 
   return (
     <header className="sm:bg-background-low-gray sm:px-20 lg:px-60">
       <div className="bg-background-low-gray h-8 max-sm:hidden"></div>
       {/* for small screen */}
-      <nav className="lg:hidden container mx-auto py-2 px-4 ">
+      <nav className="lg:hidden container mx-auto py-2 px-4 sticky top-0 z-50">
         <div className="flex items-center justify-between">
           <div>
             <Button onPress={onOpen} className="!px-0 bg-transparent">
@@ -114,7 +114,7 @@ function Header() {
         </div>
       </nav>
       {/* for large screen */}
-      <nav className="max-lg:hidden container mx-auto h-20 px-10 max-xl:px-2 bg-white rounded-xl flex items-center justify-between">
+      <nav className="max-lg:hidden container mx-auto h-20 px-10 max-xl:px-2 bg-white rounded-xl flex items-center justify-between sticky top-0 z-50">
         <div className="flex items-center gap-3">
           <Link href="/">
             <Image

@@ -1,5 +1,13 @@
+import Banner from "@/components/modules/Banner";
+import MainCategories from "@/components/modules/MainCategories";
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <>
+      <Banner />
+      <MainCategories />
+    </>
+  );
 }
 
 export default Home;

@@ -7,7 +7,7 @@ function Layouts({ children }) {
     <>
       <PromoBanner />
       <Header />
-      <main className="bg-background-low-gray h-screen">{children}</main>
+      <main className="bg-background-low-gray min-h-svh py-10">{children}</main>
       <Footer />
     </>
   );
